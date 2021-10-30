@@ -57,7 +57,7 @@ public class EnderChestBoatEntity extends CustomBoatEntity {
 		LootTable lootTable = world.getServer().getLootManager().getTable(new Identifier("blocks/ender_chest"));
 
 		PlayerEntity killer = null;
-		ItemStack tool = null;
+		ItemStack tool = ItemStack.EMPTY;
 		if (source.getAttacker() != null && source.getAttacker() instanceof PlayerEntity) {
 			killer = ((PlayerEntity) source.getAttacker());
 			tool = killer.getMainHandStack() == ItemStack.EMPTY ? killer.getOffHandStack() : killer.getMainHandStack();
